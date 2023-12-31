@@ -1,0 +1,9 @@
+node{
+  stage('SCM Checkout'){
+git 'https://github.com/AAKRATIPANDEY06/my-app.git'
+  }
+stage('Complie-Package'){
+ def mvnHome = tool name: 'maven-3', type: 'maven'
+ sh "${mvnHOme}/bin/mvn clean package
+}
+}
